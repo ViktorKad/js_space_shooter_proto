@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Game prototype</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/Sprite.js"></script>
+        <script src="js/Assets.js"></script>
+        <script src="js/Vector.js"></script>
+        <script src="js/Circle.js"></script>
+        <script src="js/Unit.js"></script>
+        <!-- main должен быть последним -->
+        <script src="js/main.js"></script>
+        <!--[if IE]>
+        <script>
+        function main() {
+            var text = "Internet Explorer не поддерживается данным приложением."
+            text += "<br />Используйте Chrome или FireFox.";
+            document.getElementById('central_div').innerHTML = text;
+        }
+        </script>
+        <![endif]-->
+        <script>
+            window.onload = main;
+        </script>
+        <style>
+            #body {
+                background-color: #faf8ef;
+                font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+                color: #776e65;
+                text-align: center;
+            }
+
+            a {
+                color: #776e65;
+            }
+
+            #left_div {
+                width: 10%;
+                height: 500px;
+                float: left;
+            }
+
+            #right_div {
+                width: 10%;
+                height: 500px;
+                float: left;
+            }
+            #central_div {
+                width: 80%;
+                height: 600px;
+                float: left;
+            }
+
+            #canvas_game_board {
+                width: 99%;
+                height: 400px;
+            }
+
+            .arraund_game_board {
+                width: 100%;
+                border: 6px solid #bbada0;
+                border-radius: 0.7em;
+                background-image: url(img/bg.png);
+            }
+
+            #legend {
+                padding-top: 20px;
+            }
+            #new_game, #start_game, #debug_on_off {
+                margin-left: 3px;
+                margin-top: 7px;
+                padding-top: 4px;
+                padding-bottom: 4px;
+                width: 100%;
+                font-size: 18px;
+                background-color: rgb(250, 240, 239);
+                border: 3px solid #bbada0;
+                border-radius: 0.3em;
+            }
+            #new_game:hover, #start_game:hover, #debug_on_off:hover {
+                border-color: rgb(127, 127, 127);
+                background-color: rgb(244, 250, 239);
+                cursor: pointer;
+            }
+
+            #indicators_div {
+                width: 100%;
+                font-size: 18px;
+                text-align: left;
+                color: #faf8ef;
+            }
+            #score_board, #ammunition_board, #weapon_board, #fps_board {
+                padding-top: 3px;
+                margin-left: 10px;
+                margin-right: 10px;
+                padding-bottom: 3px;
+                font-style: oblique;
+                display: inline-block;
+            }
+            #delta_ammunition_span {
+                color: green;
+            }
+        </style>
+    </head>
+    <body id="body">
+        <div id="left_div"></div>
+        <div id="central_div">
+            <h2>Game name</h2>
+            <div class="arraund_game_board">
+                <div id="indicators_div">
+                    <div id="fps_board">Fps: <span id="fps_span">0</span></div>
+                    <div id="score_board">Score: <span id="score_span">100</span></div>
+                    <div id="weapon_board">Weapon: <span id="weapon_span">S</span></div>
+                    <div id="ammunition_board">Ammo: <span id="ammunition_span">0</span><span id="delta_ammunition_span"></span></div>
+                </div>
+                <canvas id="canvas_game_board"></canvas>
+            </div>
+            <div id="start_game" onclick="btnStartPause();"><strong>Start / Pause</strong></div>
+            <div id="debug_on_off" onclick="Unit.prototype.debugToggle();"><strong>Debug mode on / off</strong></div>
+            <div id="new_game" onclick="location.reload();"><strong>Reload page</strong></div>
+            <div id="legend">
+                <a href="test.html">Link to QUnit tests</a>
+                <!--<p>Something interesting about game process and <a href="#">copyright</a></p>-->
+            </div>
+        </div>
+        <div id="right_div"></div>
+    </body>
+</html>
