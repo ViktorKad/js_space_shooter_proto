@@ -9,4 +9,4 @@
 
 ![Game preview img](https://raw.githubusercontent.com/ViktorKad/js_space_shooter_proto/master/img/preview.png)
 
-Попробовать игру можно на github.io, по [ссылке]:http://viktorkad.github.io/js_space_shooter_proto/
+Попробовать игру можно на github.io, по ссылке http://viktorkad.github.io/js_space_shooter_proto/
