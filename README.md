@@ -7,4 +7,6 @@
 Прототип небольшого 2D скроллера на космическую тематику.
 Игра была доведена до "играбельного" состояния. В игре нет цели или сюжета.
 
+![Game preview img](https://raw.githubusercontent.com/ViktorKad/js_space_shooter_proto/master/img/preview.png)
+
 Попробовать игру можно на github.io, по ссылке []
